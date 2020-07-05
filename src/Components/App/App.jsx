@@ -1,20 +1,18 @@
-import React, { useEffect } from 'react';
-import { getData } from '../../services/api';
+import React from 'react';
+import { hot } from 'react-hot-loader/root';
+import { Provider } from 'react-redux';
 import ROUTES from '../../Routes/index';
+import store from '../../store';
+// TEGYÉL BELE ROUTINGOT
 
 const { MainPage } = ROUTES;
 
-function App() {
-  useEffect(() => {
-    getData('https://jsonplaceholder.typicode.com/comments')
-      .then((data) => console.log(data));
-  }, []);
-
-  return (
-    <div className="app">
+const App = () => (
+  <div className="app">
+    <Provider store={store}>
       <MainPage />
-    </div>
-  );
-}
+    </Provider>
+  </div>
+);
 
-export default App;
+export default hot(App);

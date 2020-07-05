@@ -17,13 +17,16 @@ const MainPage = ({ dispatchGetAllShopsPending, shops }) => {
         <div className="app-mainpage-shop-container">
           {
             !shops
-              ? 'loading lófasz shops'
+              ? ':::::::loading lófasz shops:::::::'
               : (
-                shops.map((shop) => (
+                shops.map((shop, index) => (
                   <div
                     key={shop.id}
                     className="shop-item"
                   >
+                    {index}
+                    {' '}
+                    Shop:
                     {shop.name}
                   </div>
                 ))

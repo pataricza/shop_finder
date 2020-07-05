@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Root from './Components/App/App';
+import App from './Components/App/App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <Root />,
+  <App />,
   document.getElementById('root'),
 );
 

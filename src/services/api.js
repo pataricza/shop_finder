@@ -8,6 +8,6 @@ const api = axios.create({
   },
 });
 
-export const getData = (url) => api.get(url).then((response) => response.data);
+export const getData = (url) => api.get(url).then((response) => response.data); // eslint-disable-line 
 
-// export const postData WRITE YOUR OWN
+// export const postData ÍRD MEG MAGADNAK
