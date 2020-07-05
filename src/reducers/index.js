@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import saveAllShops from './AllShopReducers';
 
 const allReducer = combineReducers({
-  allShop: saveAllShops,
+  saveAllShops,
 });
 
 export default allReducer;

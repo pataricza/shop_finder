@@ -1,6 +1,6 @@
-export const GET_ALL_SHOPS_PENDING = 'GET_ALL_SHOPS_PENDING';
-export const GET_ALL_SHOPS_SUCCESS = 'GET_ALL_SHOPS_SUCCESS';
-export const GET_ALL_SHOPS_ERROR = 'GET_ALL_SHOPS_ERROR';
+import {
+  GET_ALL_SHOPS_PENDING, GET_ALL_SHOPS_SUCCESS, GET_ALL_SHOPS_ERROR,
+} from '../consts/actionTypes';
 
 export const getAllShopsPending = () => ({
   type: GET_ALL_SHOPS_PENDING,

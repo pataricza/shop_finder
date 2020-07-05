@@ -1,7 +1,9 @@
-import { GET_ALL_SHOPS_PENDING, GET_ALL_SHOPS_SUCCESS, GET_ALL_SHOPS_ERROR } from '../actions/AllShopActions';
+import {
+  GET_ALL_SHOPS_PENDING, GET_ALL_SHOPS_SUCCESS, GET_ALL_SHOPS_ERROR,
+} from '../consts/actionTypes';
 
 const initialState = {
-  shops: [],
+  shops: null,
   pending: false,
   error: null,
 };
@@ -13,11 +15,13 @@ const saveAllShops = (state = initialState, action) => {
         ...state,
         pending: true,
       };
-    case GET_ALL_SHOPS_SUCCESS:
+    case GET_ALL_SHOPS_SUCCESS: {
+      const { shops } = action.payload;
       return {
         ...state,
-        shops: action.payload,
+        shops,
       };
+    }
     case GET_ALL_SHOPS_ERROR:
       return {
         ...state,
