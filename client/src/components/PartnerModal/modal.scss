@@ -1,0 +1,22 @@
+.ant-select {
+  display: block !important;
+}
+
+.phone-container {
+  display: flex;
+
+  .country, .prefix {
+    width: 150px;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
