@@ -23,6 +23,7 @@
     "react"
   ],
   "rules": {
+    "linebreak-style": ["error", "windows"]
   },
   "settings": {
     "import/resolver": {
