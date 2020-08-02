@@ -4,6 +4,7 @@ import {
   Switch,
   Route,
   Redirect,
+  useLocation,
 } from 'react-router-dom';
 import ROUTES from '../Routes/index';
 
@@ -15,7 +16,9 @@ const routes = [
 ];
 
 const Navbar = () => {
-  const links = routes.map((r) => (
+  const location = useLocation().pathname;
+
+  const links = routes.filter((r) => r.url !== location).map((r) => (
     <li>
       <Link to={r.url}>{r.name}</Link>
     </li>
