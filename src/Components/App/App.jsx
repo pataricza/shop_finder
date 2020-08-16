@@ -9,9 +9,7 @@ const App = () => (
   <div className="app">
     <Provider store={store}>
       <Router>
-        <div>
-          <Navbar />
-        </div>
+        <Navbar />
       </Router>
     </Provider>
   </div>

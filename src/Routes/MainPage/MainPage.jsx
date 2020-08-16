@@ -3,6 +3,7 @@ import Proptypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getAllShopsPending } from '../../actions/AllShopActions';
 import Header from '../../Containers/Header';
+import ShopTile from '../../components/ShopTile/ShopTile';
 
 const MainPage = ({ dispatchGetAllShopsPending, shops }) => {
   useEffect(() => {
@@ -19,16 +20,8 @@ const MainPage = ({ dispatchGetAllShopsPending, shops }) => {
             !shops
               ? ':::::::loading lófasz shops:::::::'
               : (
-                shops.map((shop, index) => (
-                  <div
-                    key={shop.id}
-                    className="shop-item"
-                  >
-                    {index}
-                    {' '}
-                    Shop:
-                    {shop.name}
-                  </div>
+                shops.map((shop) => (
+                  <ShopTile shop={shop} />
                 ))
               )
           }

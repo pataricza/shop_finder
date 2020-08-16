@@ -10,7 +10,7 @@ export const getUserReducer = (store) => store.userReducer;
 
 export function* getAllShops() {
   try {
-    const shops = yield call(API.getData, 'https://jsonplaceholder.typicode.com/comments');
+    const shops = yield call(API.getData, `${process.env.REACT_APP_API}/shop`);
     yield delay(3000);
     yield put({
       type: GET_ALL_SHOPS_SUCCESS,
