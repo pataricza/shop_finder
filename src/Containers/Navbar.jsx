@@ -11,21 +11,25 @@ import ROUTES from '../Routes/index';
 const { MainPage, WelcomePage } = ROUTES;
 
 const routes = [
-  { url: '/welcome', name: 'Welcome', component: <WelcomePage /> },
-  { url: '/main', name: 'Main Page', component: <MainPage /> },
+  {
+    key: 1, url: '/welcome', name: 'Welcome', component: <WelcomePage />,
+  },
+  {
+    key: 2, url: '/main', name: 'Main Page', component: <MainPage />,
+  },
 ];
 
 const Navbar = () => {
   const location = useLocation().pathname;
 
   const links = routes.filter((r) => r.url !== location).map((r) => (
-    <li>
+    <li key={r.key}>
       <Link to={r.url}>{r.name}</Link>
     </li>
   ));
 
   const routArray = routes.map((r) => (
-    <Route path={r.url}>
+    <Route key={r.key} path={r.url}>
       {r.component}
     </Route>
   ));

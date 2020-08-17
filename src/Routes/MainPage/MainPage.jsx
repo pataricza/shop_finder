@@ -21,7 +21,7 @@ const MainPage = ({ dispatchGetAllShopsPending, shops }) => {
               ? ':::::::loading lófasz shops:::::::'
               : (
                 shops.map((shop) => (
-                  <ShopTile shop={shop} />
+                  <ShopTile key={shop.id} shop={shop} />
                 ))
               )
           }
